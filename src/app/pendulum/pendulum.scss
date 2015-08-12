@@ -1,15 +1,36 @@
 #pendulum-section{
 	min-height: 100vh;
-	// background: url(assets/images/bg.jpg) repeat center center;
+	background: url(../assets/images/bg.jpg) repeat center center;
 	width: 100%;
+	position: relative;
 	.shadow{
+		background: url(../assets/images/shadow.png) no-repeat center center;
 		position: absolute;
+		opacity: 0.4;
+		left: -70%;
+		right: -70%;
+		top: -50%;
+		bottom: -50%;
+		transform: rotate(-10deg);
+		transform-origin: 50% 25%;
 	}
 	.logo{
-
 	}
 	.bulb{
-
+		img{
+			position: absolute;
+			left: 50%;
+			transform:translate(-50%,0);
+		}
+		.perno{
+			margin-left: 10px;
+		}
+		.bulb_lighting{
+			top:155px;
+		}
+		.light{
+			top:55px;
+		}
 	}
 	.pendulum{
 
