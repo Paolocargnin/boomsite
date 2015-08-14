@@ -1,8 +1,26 @@
 #pendulum-section{
+	text-align: center;
 	min-height: 100vh;
 	background: url(../assets/images/bg.jpg) repeat center center;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
+	.logo{
+		position: absolute;
+		top:58%;
+		transform:translateX(-50%);
+		left: 50%;
+		img{
+			max-width: 380px;
+			width:100%;
+		}
+		h2{
+			margin-top:40px;
+			font-weight: lighter;
+			font-size: 22px;
+			color:#41403f;
+		}
+	}
 	.shadow{
 		background: url(../assets/images/shadow.png) no-repeat center center;
 		position: absolute;
@@ -13,27 +31,34 @@
 		bottom: -50%;
 		transform-origin: 50% 25%;
 	}
-	.logo{
-
-	}
 	.bulb{
 		transform-origin: 50% 0;
+		position: absolute;
+		left: 50%;
+		bottom:50%;
+		height: 50%;
 		img{
 			position: absolute;
 			left: 50%;
 			transform:translate(-50%,0);
 		}
+		.perno{
+			height: 70%;
+		}	
 		.bulb_lighting{
 			animation: pendulumBulbAnimation 1.5s infinite;
-			top:155px;
-		}
+	    top: 68.5%;
+	    height: 40%;
+	    left: 4px;
+	  }
 		.light{
+			opacity: 0.5; 
 			animation: pendulumLightAnimation 1.5s infinite;
 			top:55px;
 		}
 	}
 	.pendulum{
-		animation: pendulumAnimation 3s cubic-bezier(0.51, 0.01, 0.54, 0.5) infinite;
+		animation: pendulumAnimation 4s cubic-bezier(0.51, 0.01, 0.54, 0.5) infinite;
 	}
 }
 
@@ -45,43 +70,77 @@
 		transform:rotate(-10deg);
 	}
 }
-@keyframes pendulumLightAnimation{
-	0%,100%{
-		opacity: 0.5;
+// @keyframes pendulumLightAnimation{
+// 	$op:0.5;
+// 	0%,100%{
+// 		opacity: $op;
+// 	}
+// 	50%{
+// 		opacity: $op - 0.2;
+// 	}
+// 	52%{
+// 		opacity: $op - 0.5;
+// 	}
+// 	57%{
+// 		opacity: $op - 0.1;
+// 	}
+// 	60%{
+// 		opacity: $op - 0.5;
+// 	}
+// 	63%{
+// 		opacity: $op;
+// 	}
+// }
+// @keyframes pendulumBulbAnimation{
+// 	0%,100%{
+// 		opacity: 1;
+// 	}
+// 	50%{
+// 		opacity: 0.9;
+// 	}
+// 	52%{
+// 		opacity: 0.8;
+// 	}
+// 	57%{
+// 		opacity: 1;
+// 	}
+// 	60%{
+// 		opacity: 0.8;
+// 	}
+// 	63%{
+// 		opacity: 1;
+// 	}
+// }
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+	#pendulum-section{
+		.logo{
+			h2{
+				font-size: 48px;
+			}
+		}
 	}
-	50%{
-		opacity: 0.4;
-	}
-	52%{
-		opacity: 0.1;
-	}
-	57%{
-		opacity: 0.5;
-	}
-	60%{
-		opacity: 0.0;
-	}
-	63%{
-		opacity: 0.4;
-	}
+
 }
-@keyframes pendulumBulbAnimation{
-	0%,100%{
-		opacity: 1;
-	}
-	50%{
-		opacity: 0.8;
-	}
-	52%{
-		opacity: 0.6;
-	}
-	57%{
-		opacity: 1;
-	}
-	60%{
-		opacity: 0.6;
-	}
-	63%{
-		opacity: 1;
-	}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
 }
