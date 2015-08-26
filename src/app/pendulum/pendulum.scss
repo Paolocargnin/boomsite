@@ -1,7 +1,7 @@
 #pendulum-section{
 	text-align: center;
 	min-height: 100vh;
-	background: url(../assets/images/bg.jpg) repeat center center;
+	// background: url(../assets/images/bg.jpg) repeat center center;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
@@ -23,8 +23,8 @@
 	}
 	.shadow{
 		background: url(../assets/images/shadow.png) no-repeat center center;
-		position: absolute;
-		opacity: 0.4;
+		position: fixed;
+		opacity: 0.8;
 		left: -70%;
 		right: -70%;
 		top: -50%;
@@ -33,7 +33,7 @@
 	}
 	.bulb{
 		transform-origin: 50% 0;
-		position: absolute;
+		position: fixed;
 		left: 50%;
 		bottom:50%;
 		height: 50%;
@@ -43,22 +43,22 @@
 			transform:translate(-50%,0);
 		}
 		.perno{
-			height: 70%;
+			height: 70%; 
 		}	
 		.bulb_lighting{
-			animation: pendulumBulbAnimation 1.5s infinite;
+			animation: pendulumBulbAnimation 2.5s infinite;
 	    top: 68.5%;
 	    height: 40%;
 	    left: 4px;
 	  }
 		.light{
 			opacity: 0.5; 
-			animation: pendulumLightAnimation 1.5s infinite;
+			animation: pendulumLightAnimation 2.5s infinite;
 			top:55px;
 		}
 	}
 	.pendulum{
-		animation: pendulumAnimation 4s cubic-bezier(0.51, 0.01, 0.54, 0.5) infinite;
+		animation: pendulumAnimation 3s cubic-bezier(0.42, -0.41, 0.54, 0.5) infinite;
 	}
 }
 
@@ -70,47 +70,47 @@
 		transform:rotate(-10deg);
 	}
 }
-// @keyframes pendulumLightAnimation{
-// 	$op:0.5;
-// 	0%,100%{
-// 		opacity: $op;
-// 	}
-// 	50%{
-// 		opacity: $op - 0.2;
-// 	}
-// 	52%{
-// 		opacity: $op - 0.5;
-// 	}
-// 	57%{
-// 		opacity: $op - 0.1;
-// 	}
-// 	60%{
-// 		opacity: $op - 0.5;
-// 	}
-// 	63%{
-// 		opacity: $op;
-// 	}
-// }
-// @keyframes pendulumBulbAnimation{
-// 	0%,100%{
-// 		opacity: 1;
-// 	}
-// 	50%{
-// 		opacity: 0.9;
-// 	}
-// 	52%{
-// 		opacity: 0.8;
-// 	}
-// 	57%{
-// 		opacity: 1;
-// 	}
-// 	60%{
-// 		opacity: 0.8;
-// 	}
-// 	63%{
-// 		opacity: 1;
-// 	}
-// }
+@keyframes pendulumLightAnimation{
+	$op:0.5;
+	0%,100%{
+		opacity: $op;
+	}
+	50%{
+		opacity: $op - 0.2;
+	}
+	52%{
+		opacity: $op - 0.5;
+	}
+	57%{
+		opacity: $op - 0.1;
+	}
+	60%{
+		opacity: $op - 0.5;
+	}
+	63%{
+		opacity: $op;
+	}
+}
+@keyframes pendulumBulbAnimation{
+	0%,100%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.9;
+	}
+	52%{
+		opacity: 0.8;
+	}
+	57%{
+		opacity: 1;
+	}
+	60%{
+		opacity: 0.8;
+	}
+	63%{
+		opacity: 1;
+	}
+}
 
 
 // Small grid
@@ -144,6 +144,3 @@
 
 @media (min-width: $screen-lg-min) {
 }
-
-
-// right one pendulumAnimation 3s cubic-bezier(0.42, -0.41, 0.54, 0.5) infinite
